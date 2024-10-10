@@ -1,0 +1,28 @@
+//Variabel Ukuran Area Bola Memantul
+
+let x = 320;
+let y = 90;
+
+let xspeed = 10;
+let yspeed = 2;
+
+//Ukuran Bola
+
+let r = 30;
+function setup () {
+  createCanvas (640, 360);
+}
+
+function draw () {
+  background (0);
+  ellipse (x, y, r*2, r*2);
+  
+  x += xspeed;
+  y += yspeed;
+  if (x > width -r || x < r){
+    xspeed = -yspeed;
+  }
+   if (y > width -r || y < r){
+    yspeed = -xspeed;
+  }
+}
